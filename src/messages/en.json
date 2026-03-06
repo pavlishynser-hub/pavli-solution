@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "title": "PavliSolution — AI Marketing & Software Development Agency",
+    "description": "We help companies grow using AI, marketing and custom software. AI automation, digital marketing, web & mobile development, app launch."
+  },
+  "nav": {
+    "services": "Services",
+    "aiAutomation": "AI & Automation",
+    "marketing": "Marketing",
+    "development": "Development",
+    "appLaunch": "App Launch",
+    "caseStudies": "Case Studies",
+    "reviews": "Reviews",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "payment": "Payment",
+    "pricing": "Pricing"
+  },
+  "hero": {
+    "title": "AI Marketing & Software Development Agency",
+    "subtitle": "We build AI systems, websites and marketing strategies that help businesses grow faster.",
+    "cta1": "Get Strategy",
+    "cta2": "Book Consultation"
+  },
+  "trust": {
+    "title": "Trusted by innovative companies worldwide"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "End-to-end solutions to scale your business",
+    "ai": {
+      "title": "AI Solutions",
+      "description": "AI automation, chatbots, business assistants and customer support systems powered by artificial intelligence."
+    },
+    "marketing": {
+      "title": "Digital Marketing",
+      "description": "SMM, SEO, Google Ads, content marketing and comprehensive marketing strategies that drive real results."
+    },
+    "development": {
+      "title": "Development",
+      "description": "Website development, web applications, mobile apps, SaaS platforms and startup MVP development."
+    },
+    "appLaunch": {
+      "title": "App Launch",
+      "description": "App Store & Google Play publishing, launch strategy and app marketing to reach your audience."
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real results for real businesses",
+    "viewAll": "View All Case Studies",
+    "readMore": "Read Case Study"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Video testimonials from satisfied clients"
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Our proven process to deliver results",
+    "steps": {
+      "strategy": {
+        "title": "Strategy",
+        "description": "We analyze your business, competitors and market to create a tailored growth strategy."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Our team builds your solution using cutting-edge technologies and best practices."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "We deploy your product and ensure everything runs smoothly from day one."
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "Continuous optimization and scaling to maximize your business results."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to grow your business?",
+    "subtitle": "Let's discuss your project and find the best solution.",
+    "button": "Start Your Project"
+  },
+  "footer": {
+    "description": "AI Marketing & Software Development Agency. We help companies grow using AI, marketing and custom software.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved."
+  },
+  "about": {
+    "title": "About PavliSolution",
+    "subtitle": "We are a team of AI experts, marketers and developers building the future of digital business.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses worldwide with AI-driven solutions, effective marketing strategies, and exceptional software development."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": "Innovation First",
+      "innovationDesc": "We stay at the forefront of AI and technology to deliver cutting-edge solutions.",
+      "results": "Results Driven",
+      "resultsDesc": "Every strategy and product we build is focused on delivering measurable business outcomes.",
+      "transparency": "Transparency",
+      "transparencyDesc": "We believe in open communication and honest reporting at every stage.",
+      "partnership": "Partnership",
+      "partnershipDesc": "We treat every client as a partner, invested in their long-term success."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Ready to start your project? Get in touch with our team.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "service": "Service Interested In",
+      "message": "Tell us about your project",
+      "submit": "Send Message"
+    },
+    "info": {
+      "email": "hello@pavlisolution.com",
+      "phone": "+1 (555) 000-0000",
+      "address": "Global — Remote First"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights, strategies and tips from our team",
+    "readMore": "Read More"
+  },
+  "reviews": {
+    "title": "Client Reviews",
+    "subtitle": "What our clients say about working with us"
+  },
+  "servicePage": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "whyChooseUs": "Why Choose Us",
+    "benefits": "Benefits",
+    "process": "Our Process",
+    "faq": "Frequently Asked Questions",
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "Contact us today for a free consultation.",
+    "ctaButton": "Get Free Consultation"
+  },
+  "aiAutomation": {
+    "title": "AI Automation for Business",
+    "subtitle": "Streamline operations and boost efficiency with custom AI solutions.",
+    "description": "We design and implement AI automation systems that transform how your business operates — from customer service to internal workflows."
+  },
+  "aiChatbot": {
+    "title": "AI Chatbot Development",
+    "subtitle": "Intelligent chatbots that engage customers 24/7.",
+    "description": "Custom AI chatbots built with the latest LLM technology to handle customer inquiries, generate leads, and provide instant support."
+  },
+  "aiAssistant": {
+    "title": "AI Business Assistant",
+    "subtitle": "Your AI-powered business companion.",
+    "description": "AI assistants tailored to your business processes — from data analysis to automated reporting and decision support."
+  },
+  "aiSupport": {
+    "title": "AI Customer Support",
+    "subtitle": "Automated customer support that feels human.",
+    "description": "AI-powered support systems that resolve customer issues instantly, reduce wait times and improve satisfaction scores."
+  },
+  "smm": {
+    "title": "Social Media Marketing",
+    "subtitle": "Build your brand and engage your audience on social media.",
+    "description": "Strategic social media management across all platforms — content creation, community management, paid campaigns and analytics."
+  },
+  "seo": {
+    "title": "SEO Optimization",
+    "subtitle": "Rank higher, get more organic traffic.",
+    "description": "Comprehensive SEO services including technical SEO, on-page optimization, link building and content strategy for sustainable growth."
+  },
+  "googleAds": {
+    "title": "Google Ads Management",
+    "subtitle": "Maximize your ROI with expert PPC management.",
+    "description": "Data-driven Google Ads campaigns that deliver qualified leads and measurable returns on your advertising investment."
+  },
+  "contentMarketing": {
+    "title": "Content Marketing",
+    "subtitle": "Content that educates, engages and converts.",
+    "description": "Strategic content creation and distribution — blog posts, whitepapers, videos and more to establish thought leadership and drive traffic."
+  },
+  "marketingStrategy": {
+    "title": "Marketing Strategy",
+    "subtitle": "A comprehensive roadmap for your marketing success.",
+    "description": "Data-driven marketing strategies tailored to your business goals, target audience and competitive landscape."
+  },
+  "websiteDev": {
+    "title": "Website Development",
+    "subtitle": "Modern, fast and SEO-optimized websites.",
+    "description": "Custom website development with a focus on performance, user experience and search engine optimization."
+  },
+  "webAppDev": {
+    "title": "Web Application Development",
+    "subtitle": "Powerful web applications for your business.",
+    "description": "Full-stack web application development using modern frameworks and cloud infrastructure for scalable, reliable solutions."
+  },
+  "mobileAppDev": {
+    "title": "Mobile App Development",
+    "subtitle": "Native and cross-platform mobile applications.",
+    "description": "iOS and Android app development — from concept to launch, with focus on performance and user experience."
+  },
+  "saasDev": {
+    "title": "SaaS Development",
+    "subtitle": "Build your SaaS product from idea to scale.",
+    "description": "End-to-end SaaS development — architecture, development, deployment and scaling for subscription-based software products."
+  },
+  "startupMvp": {
+    "title": "Startup MVP Development",
+    "subtitle": "Launch your startup faster with a validated MVP.",
+    "description": "Rapid MVP development to validate your business idea, attract investors and get to market quickly."
+  },
+  "appStorePublishing": {
+    "title": "App Store Publishing",
+    "subtitle": "Get your app live on the Apple App Store.",
+    "description": "Complete App Store publishing service — from app review preparation to ASO optimization and successful approval."
+  },
+  "googlePlayPublishing": {
+    "title": "Google Play Publishing",
+    "subtitle": "Launch your app on Google Play.",
+    "description": "End-to-end Google Play publishing — store listing optimization, compliance review and launch support."
+  },
+  "appLaunchMarketing": {
+    "title": "App Launch Marketing",
+    "subtitle": "Make your app launch a success.",
+    "description": "Comprehensive app launch strategy — pre-launch buzz, launch day execution and post-launch growth marketing."
+  },
+  "payment": {
+    "title": "Secure Payment",
+    "subtitle": "Make a deposit or pay for services quickly and securely",
+    "amountLabel": "Payment Amount",
+    "customAmount": "Custom amount",
+    "currency": "USD",
+    "projectLabel": "Project / Invoice Reference",
+    "projectPlaceholder": "e.g. Website Redesign, INV-001",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "emailLabel": "Email",
+    "emailPlaceholder": "john@company.com",
+    "notesLabel": "Notes (optional)",
+    "notesPlaceholder": "Any additional details about this payment",
+    "methodTitle": "Select Payment Method",
+    "cardTitle": "Credit / Debit Card",
+    "cardDesc": "Visa, Mastercard, Amex — instant payment",
+    "cardButton": "Pay with Card",
+    "bankTitle": "Bank Transfer (Wise)",
+    "bankDesc": "ACH (USA) / SWIFT / SEPA — 0% fee",
+    "bankDetails": "Transfer Details",
+    "bankName": "Wise (TransferWise)",
+    "bankAccount": "Account",
+    "bankRouting": "Routing",
+    "bankSwift": "SWIFT/BIC",
+    "bankReference": "Reference",
+    "bankCopy": "Copy",
+    "bankCopied": "Copied!",
+    "applePayTitle": "Apple Pay / Google Pay",
+    "applePayDesc": "Fast one-tap payment",
+    "applePayButton": "Pay",
+    "secureNote": "All payments are processed securely via Stripe. We never store your card details.",
+    "trustBadges": "256-bit SSL · PCI DSS Compliant · Powered by Stripe & Wise",
+    "needHelp": "Need help with payment?",
+    "contactUs": "Contact us"
+  }
+}
