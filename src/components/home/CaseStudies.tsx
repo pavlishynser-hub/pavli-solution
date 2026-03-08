@@ -8,7 +8,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import Button from "@/components/ui/Button";
 
 const cases = [
-  { slug: "ai-chatbot-ecommerce", title: "AI Chatbot for E-Commerce", category: "AI Solutions", result: "+340%", resultLabel: "engagement", gradient: "linear-gradient(135deg, #1a1f3d 0%, #0d1a2d 100%)" },
+  { slug: "ai-chatbot-cosmetics", title: "AI Chatbot for Cosmetics", category: "AI Chatbot", result: "+45%", resultLabel: "conversions", gradient: "linear-gradient(135deg, #1a2a1f 0%, #0d1a2d 100%)" },
   { slug: "seo-saas-startup", title: "SEO Strategy for SaaS", category: "Marketing", result: "+520%", resultLabel: "organic traffic", gradient: "linear-gradient(135deg, #0d2a1f 0%, #0d1a2d 100%)" },
   { slug: "fintech-mobile-app", title: "Fintech Mobile App", category: "Development", result: "50K+", resultLabel: "downloads", gradient: "linear-gradient(135deg, #1a1a3d 0%, #0d1a2d 100%)" },
   { slug: "app-launch-health", title: "Health App Launch", category: "App Launch", result: "Top 10", resultLabel: "category", gradient: "linear-gradient(135deg, #0d2a1f 0%, #1a1a2d 100%)" },

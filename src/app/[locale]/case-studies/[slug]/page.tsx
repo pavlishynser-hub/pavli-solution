@@ -5,7 +5,23 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
 
-const caseData: Record<string, { title: string; category: string; challenge: string; solution: string; results: { metric: string; value: string }[]; testimonial: { quote: string; name: string; role: string } }> = {
+const caseData: Record<string, { title: string; category: string; challenge: string; solution: string; results: { metric: string; value: string }[]; testimonial: { quote: string; name: string; role: string }; video?: string; solutionDetails?: string[] }> = {
+  "ai-chatbot-cosmetics": {
+    title: "AI Chatbot for Online Cosmetics Store", category: "AI Chatbot",
+    challenge: "An online cosmetics store in Spain struggled with low conversion rates on Google Ads traffic. Customers would browse products but leave without purchasing — overwhelmed by the wide product range and unsure which products suit their specific skin concerns.",
+    solution: "We developed a custom AI chatbot widget, trained on the entire product catalog with all product features, ingredients, and use cases. We built a personalized knowledge base and deployed it into a vector database for instant semantic search.",
+    solutionDetails: [
+      "Trained the AI on the full product catalog — ingredients, benefits, skin types, usage instructions",
+      "Built a custom vector database (knowledge base) for accurate semantic product search",
+      "The chatbot recommends products based on individual skin concerns and problems",
+      "Integrated as a widget directly on the client's website",
+      "Clients can track all questions asked to the AI assistant and analyze frequent queries",
+      "Full setup and integration — just $500",
+    ],
+    results: [{ metric: "Google Ads Conversions", value: "+45%" }, { metric: "Avg. Session Duration", value: "+3min" }, { metric: "Setup Cost", value: "$500" }, { metric: "Time to Launch", value: "5 days" }],
+    testimonial: { quote: "The AI chatbot knows our products better than most of our staff. Customers get instant personalized recommendations and our conversion rate from Google Ads improved dramatically.", name: "Maria G.", role: "Owner, Cosmetics Store (Spain)" },
+    video: "/videos/ai-chatbot-cosmetics-demo.mp4",
+  },
   "ai-chatbot-ecommerce": {
     title: "AI Chatbot for E-Commerce Platform", category: "AI Solutions",
     challenge: "A major e-commerce platform was struggling with high customer support costs and slow response times, leading to cart abandonment rates above 70%.",
@@ -63,30 +79,63 @@ export default function CaseStudyPage() {
 
       <AnimatedSection style={{ padding: "24px 0 96px" }}>
         <div style={{ maxWidth: "750px", margin: "0 auto", padding: "0 20px", display: "flex", flexDirection: "column", gap: "28px" }}>
+
+          {/* Video demo */}
+          {data.video && (
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <div className="premium-card" style={{ padding: 0, overflow: "hidden" }}>
+                <div style={{ position: "relative", maxWidth: "360px", margin: "0 auto" }}>
+                  <video
+                    src={data.video}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    style={{
+                      width: "100%",
+                      display: "block",
+                      borderRadius: "20px",
+                      background: "#111",
+                    }}
+                  />
+                </div>
+                <div style={{ padding: "16px 24px 20px", textAlign: "center" }}>
+                  <p style={{ fontSize: "13px", color: "#4B5563" }}>Live demo — AI chatbot in action</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {/* Challenge */}
-          <div style={{ padding: "32px", borderRadius: "16px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+          <div className="premium-card" style={{ padding: "32px" }}>
             <h2 style={{ fontSize: "20px", fontWeight: 700, color: "#5B8CFF", marginBottom: "12px" }}>The Challenge</h2>
             <p style={{ fontSize: "15px", color: "#D1D5DB", lineHeight: 1.7 }}>{data.challenge}</p>
           </div>
 
           {/* Solution */}
-          <div style={{ padding: "32px", borderRadius: "16px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+          <div className="premium-card" style={{ padding: "32px" }}>
             <h2 style={{ fontSize: "20px", fontWeight: 700, color: "#7CF7C9", marginBottom: "12px" }}>Our Solution</h2>
-            <p style={{ fontSize: "15px", color: "#D1D5DB", lineHeight: 1.7 }}>{data.solution}</p>
+            <p style={{ fontSize: "15px", color: "#D1D5DB", lineHeight: 1.7, marginBottom: data.solutionDetails ? "20px" : 0 }}>{data.solution}</p>
+            {data.solutionDetails && (
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
+                {data.solutionDetails.map((detail, i) => (
+                  <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
+                    <span className="gradient-text" style={{ fontSize: "16px", fontWeight: 700, lineHeight: 1.5, flexShrink: 0 }}>✓</span>
+                    <span style={{ fontSize: "14px", color: "#9CA3AF", lineHeight: 1.6 }}>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           {/* Results */}
           <div>
             <h2 style={{ fontSize: "22px", fontWeight: 700, textAlign: "center", marginBottom: "20px" }}>Results</h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "12px" }}>
               {data.results.map((r, i) => (
                 <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <div style={{
-                    padding: "20px 12px", borderRadius: "16px", textAlign: "center",
-                    background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)",
-                  }}>
-                    <p className="gradient-text" style={{ fontSize: "22px", fontWeight: 700, marginBottom: "4px" }}>{r.value}</p>
-                    <p style={{ fontSize: "12px", color: "#6B7280" }}>{r.metric}</p>
+                  <div className="premium-card" style={{ padding: "24px 16px", textAlign: "center" }}>
+                    <p className="gradient-text" style={{ fontSize: "24px", fontWeight: 800, marginBottom: "6px" }}>{r.value}</p>
+                    <p style={{ fontSize: "12px", color: "#4B5563" }}>{r.metric}</p>
                   </div>
                 </motion.div>
               ))}
@@ -94,15 +143,13 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Testimonial */}
-          <div style={{
-            padding: "32px", borderRadius: "16px", textAlign: "center",
-            background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)",
-          }}>
+          <div className="premium-card" style={{ padding: "32px", textAlign: "center" }}>
+            <span className="gradient-text" style={{ fontSize: "48px", fontWeight: 800, lineHeight: 0.8, display: "block", marginBottom: "12px", opacity: 0.2 }}>&ldquo;</span>
             <blockquote style={{ fontSize: "16px", color: "#D1D5DB", fontStyle: "italic", marginBottom: "16px", lineHeight: 1.7 }}>
-              &ldquo;{data.testimonial.quote}&rdquo;
+              {data.testimonial.quote}
             </blockquote>
-            <p style={{ fontSize: "14px", fontWeight: 500, color: "#fff" }}>{data.testimonial.name}</p>
-            <p style={{ fontSize: "12px", color: "#6B7280" }}>{data.testimonial.role}</p>
+            <p style={{ fontSize: "14px", fontWeight: 600, color: "#fff" }}>{data.testimonial.name}</p>
+            <p style={{ fontSize: "12px", color: "#4B5563" }}>{data.testimonial.role}</p>
           </div>
 
           <div style={{ textAlign: "center" }}>

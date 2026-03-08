@@ -7,6 +7,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionTitle from "@/components/ui/SectionTitle";
 
 const cases = [
+  { slug: "ai-chatbot-cosmetics", title: "AI Chatbot for Online Cosmetics Store", category: "AI Chatbot", result: "+45% Google Ads conversions", color: "#7CF7C9", featured: true },
   { slug: "ai-chatbot-ecommerce", title: "AI Chatbot for E-Commerce Platform", category: "AI Solutions", result: "+340% customer engagement", color: "#5B8CFF" },
   { slug: "seo-saas-startup", title: "SEO Strategy for SaaS Startup", category: "Marketing", result: "+520% organic traffic", color: "#7CF7C9" },
   { slug: "fintech-mobile-app", title: "Fintech Mobile App Development", category: "Development", result: "50K+ downloads in first month", color: "#5B8CFF" },
