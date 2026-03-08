@@ -5,7 +5,16 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
 
-const reviews = [
+const videoTestimonials = [
+  { id: "7xrZDcbPFWg", name: "Client Review #1" },
+  { id: "PtZxMHnrNKg", name: "Client Review #2" },
+  { id: "3VglVNwqIPQ", name: "Client Review #3" },
+  { id: "pBbMAx8P0MU", name: "Client Review #4" },
+  { id: "R-xUFqsHEE0", name: "Client Review #5" },
+  { id: "UjZYYMBOAyM", name: "Client Review #6" },
+];
+
+const textReviews = [
   { name: "Sarah Johnson", role: "CEO, TechCorp", stars: 5, quote: "PavliSolution transformed our business with AI automation. Revenue increased by 200% in just 6 months. Their team is incredibly professional and responsive." },
   { name: "Michael Chen", role: "CTO, DataFlow", stars: 5, quote: "The development team delivered our SaaS platform ahead of schedule. Exceptional code quality, great communication, and a genuine understanding of our product vision." },
   { name: "Emily Roberts", role: "Marketing Director, ScaleUp", stars: 5, quote: "Their marketing strategy doubled our organic traffic in 4 months. The SEO results speak for themselves — we now rank #1 for our main keywords." },
@@ -33,10 +42,77 @@ export default function ReviewsPage() {
     <>
       <PageHero title={t("title")} subtitle={t("subtitle")} />
 
-      <AnimatedSection style={{ padding: "24px 0 96px" }}>
+      {/* Video Testimonials */}
+      <AnimatedSection style={{ padding: "24px 0 80px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "20px" }}>
-            {reviews.map((review, i) => (
+          <div style={{ marginBottom: "48px" }}>
+            <div style={{ width: "48px", height: "3px", borderRadius: "2px", background: "linear-gradient(90deg, #5B8CFF, #7CF7C9)", marginBottom: "20px" }} />
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#fff", marginBottom: "8px", letterSpacing: "-0.02em" }}>
+              Video Reviews
+            </h2>
+            <p style={{ fontSize: "15px", color: "#4B5563" }}>Real feedback from our clients</p>
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+            gap: "16px",
+          }}>
+            {videoTestimonials.map((video, i) => (
+              <motion.div
+                key={video.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
+              >
+                <div className="premium-card" style={{ padding: 0, overflow: "hidden" }}>
+                  <div style={{
+                    position: "relative",
+                    width: "100%",
+                    aspectRatio: "9 / 16",
+                    borderRadius: "20px",
+                    overflow: "hidden",
+                    background: "#111",
+                  }}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
+                      title={video.name}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        border: "none",
+                      }}
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Gradient separator */}
+      <div className="gradient-line" style={{ maxWidth: "1100px", margin: "0 auto", opacity: 0.2 }} />
+
+      {/* Text Reviews */}
+      <AnimatedSection style={{ padding: "80px 0 96px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
+          <div style={{ marginBottom: "48px" }}>
+            <div style={{ width: "48px", height: "3px", borderRadius: "2px", background: "linear-gradient(90deg, #5B8CFF, #7CF7C9)", marginBottom: "20px" }} />
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#fff", marginBottom: "8px", letterSpacing: "-0.02em" }}>
+              Client Feedback
+            </h2>
+            <p style={{ fontSize: "15px", color: "#4B5563" }}>What our clients say about working with us</p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "16px" }}>
+            {textReviews.map((review, i) => (
               <motion.div
                 key={review.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -44,30 +120,32 @@ export default function ReviewsPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.4 }}
               >
-                <div style={{
+                <div className="premium-card" style={{
                   height: "100%",
                   padding: "28px",
-                  borderRadius: "16px",
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
                   display: "flex",
                   flexDirection: "column",
                 }}>
                   <Stars count={review.stars} />
+
+                  <span className="gradient-text" style={{ fontSize: "48px", fontWeight: 800, lineHeight: 0.8, marginBottom: "8px", opacity: 0.2 }}>&ldquo;</span>
+
                   <blockquote style={{ fontSize: "14px", color: "#D1D5DB", lineHeight: 1.7, marginBottom: "20px", flex: 1 }}>
-                    &ldquo;{review.quote}&rdquo;
+                    {review.quote}
                   </blockquote>
+
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "16px", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
                     <div className="gradient-blue" style={{
-                      width: "36px", height: "36px", borderRadius: "50%",
+                      width: "40px", height: "40px", borderRadius: "12px",
                       display: "flex", alignItems: "center", justifyContent: "center",
                       fontSize: "13px", fontWeight: 700, flexShrink: 0,
+                      boxShadow: "0 0 16px rgba(91,140,255,0.15)",
                     }}>
-                      {review.name[0]}
+                      {review.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
-                      <p style={{ fontSize: "14px", fontWeight: 500, color: "#fff" }}>{review.name}</p>
-                      <p style={{ fontSize: "12px", color: "#6B7280" }}>{review.role}</p>
+                      <p style={{ fontSize: "14px", fontWeight: 600, color: "#fff" }}>{review.name}</p>
+                      <p style={{ fontSize: "12px", color: "#4B5563" }}>{review.role}</p>
                     </div>
                   </div>
                 </div>
