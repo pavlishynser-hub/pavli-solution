@@ -12,6 +12,7 @@ const videoTestimonials = [
   { id: "pBbMAx8P0MU", name: "Client Review #4" },
   { id: "R-xUFqsHEE0", name: "Client Review #5" },
   { id: "UjZYYMBOAyM", name: "Client Review #6" },
+  { id: "-E3GHJFaxv0", name: "Client Review #7" },
 ];
 
 export default function Testimonials() {
