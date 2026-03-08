@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import LazyVideo from "@/components/ui/LazyVideo";
 import { Link } from "@/i18n/navigation";
 
 const features = [
@@ -83,14 +84,7 @@ export default function AIChatbotPage() {
             {/* Video */}
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="premium-card" style={{ padding: 0, overflow: "hidden" }}>
-                <video
-                  src="/videos/ai-chatbot-cosmetics-demo.mp4"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  style={{ width: "100%", display: "block", borderRadius: "20px", background: "#111" }}
-                  poster=""
-                />
+                <LazyVideo src="/videos/ai-chatbot-cosmetics-demo.mp4" label="Watch AI chatbot demo" />
                 <div style={{ padding: "14px 20px", textAlign: "center" }}>
                   <p style={{ fontSize: "12px", color: "#4B5563" }}>Live demo — AI assistant recommending products</p>
                 </div>

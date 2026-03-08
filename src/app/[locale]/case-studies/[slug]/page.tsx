@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import Button from "@/components/ui/Button";
+import LazyVideo from "@/components/ui/LazyVideo";
 
 const caseData: Record<string, { title: string; category: string; challenge: string; solution: string; results: { metric: string; value: string }[]; testimonial: { quote: string; name: string; role: string }; video?: string; solutionDetails?: string[] }> = {
   "ai-chatbot-cosmetics": {
@@ -83,23 +84,10 @@ export default function CaseStudyPage() {
           {/* Video demo */}
           {data.video && (
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <div className="premium-card" style={{ padding: 0, overflow: "hidden" }}>
-                <div style={{ position: "relative", maxWidth: "360px", margin: "0 auto" }}>
-                  <video
-                    src={data.video}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    style={{
-                      width: "100%",
-                      display: "block",
-                      borderRadius: "20px",
-                      background: "#111",
-                    }}
-                  />
-                </div>
-                <div style={{ padding: "16px 24px 20px", textAlign: "center" }}>
-                  <p style={{ fontSize: "13px", color: "#4B5563" }}>Live demo — AI chatbot in action</p>
+              <div className="premium-card" style={{ padding: 0, overflow: "hidden", maxWidth: "360px", margin: "0 auto" }}>
+                <LazyVideo src={data.video} label="Watch demo" />
+                <div style={{ padding: "14px 24px 20px", textAlign: "center" }}>
+                  <p style={{ fontSize: "12px", color: "#4B5563" }}>Live demo — AI chatbot in action</p>
                 </div>
               </div>
             </motion.div>

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
+import LazyYoutube from "@/components/ui/LazyYoutube";
 
 const videoTestimonials = [
   { id: "7xrZDcbPFWg", name: "Client Review #1" },
@@ -57,8 +58,8 @@ export default function ReviewsPage() {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-            gap: "16px",
+            gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+            gap: "14px",
           }}>
             {videoTestimonials.map((video, i) => (
               <motion.div
@@ -66,32 +67,10 @@ export default function ReviewsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08, duration: 0.4 }}
+                transition={{ delay: i * 0.06, duration: 0.4 }}
               >
-                <div className="premium-card" style={{ padding: 0, overflow: "hidden" }}>
-                  <div style={{
-                    position: "relative",
-                    width: "100%",
-                    aspectRatio: "9 / 16",
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    background: "#111",
-                  }}>
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
-                      title={video.name}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        border: "none",
-                      }}
-                    />
-                  </div>
+                <div className="premium-card" style={{ padding: 0, overflow: "hidden", aspectRatio: "9 / 16" }}>
+                  <LazyYoutube videoId={video.id} title={video.name} />
                 </div>
               </motion.div>
             ))}
@@ -99,7 +78,6 @@ export default function ReviewsPage() {
         </div>
       </AnimatedSection>
 
-      {/* Gradient separator */}
       <div className="gradient-line" style={{ maxWidth: "1100px", margin: "0 auto", opacity: 0.2 }} />
 
       {/* Text Reviews */}
@@ -122,27 +100,14 @@ export default function ReviewsPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.4 }}
               >
-                <div className="premium-card" style={{
-                  height: "100%",
-                  padding: "28px",
-                  display: "flex",
-                  flexDirection: "column",
-                }}>
+                <div className="premium-card" style={{ height: "100%", padding: "28px", display: "flex", flexDirection: "column" }}>
                   <Stars count={review.stars} />
-
                   <span className="gradient-text" style={{ fontSize: "48px", fontWeight: 800, lineHeight: 0.8, marginBottom: "8px", opacity: 0.2 }}>&ldquo;</span>
-
                   <blockquote style={{ fontSize: "14px", color: "#D1D5DB", lineHeight: 1.7, marginBottom: "20px", flex: 1 }}>
                     {review.quote}
                   </blockquote>
-
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "16px", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-                    <div className="gradient-blue" style={{
-                      width: "40px", height: "40px", borderRadius: "12px",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: "13px", fontWeight: 700, flexShrink: 0,
-                      boxShadow: "0 0 16px rgba(91,140,255,0.15)",
-                    }}>
+                    <div className="gradient-blue" style={{ width: "40px", height: "40px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "13px", fontWeight: 700, flexShrink: 0, boxShadow: "0 0 16px rgba(91,140,255,0.15)" }}>
                       {review.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div>
