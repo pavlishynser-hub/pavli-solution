@@ -13,6 +13,7 @@ const videoTestimonials = [
   { id: "R-xUFqsHEE0", name: "Client Review #5" },
   { id: "UjZYYMBOAyM", name: "Client Review #6" },
   { id: "-E3GHJFaxv0", name: "Client Review #7" },
+  { id: "AkAQoQvH5-w", name: "Client Review #8" },
 ];
 
 const textReviews = [
